@@ -1,0 +1,305 @@
+.vikariat-block h3 {
+	font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-block p {
+	font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-block p a {
+	color: #ed1846 !important;
+}
+.vikariat-block a.kontakt-button {
+	font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #5a3f99;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 25px;
+}
+.vikariat-block a.kontakt-button:after {
+	content: '';
+    background-image: url(../img/arrow-right-colored.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    width: 11px;
+    height: 8px;
+    top: 3px;
+}
+.vikariat-mentor h3{
+	font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #222222;
+    margin:0px;
+}
+.vikariat-mentor p {
+	font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-mentor a h3,
+.vikariat-mentor p a {
+	color: #ed1846 !important;
+}
+
+.vikariat-kontakt {
+	margin-top: 30px;
+}
+.vikariat-kontakt h3 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #5a3f99;
+}
+
+.vikariat-kontakt h5 {
+	margin-top: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -0.9px;
+	text-align: left;
+	color: #222222;
+    margin-bottom: 0px;
+}
+.vikariat-kontakt p {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0px;
+	text-align: left;
+	color: #222222;
+    margin-bottom: 10px;
+}
+.vikariat-kontakt .vik-profile{
+	margin-bottom: 33px;
+    background: white;
+}
+.vikariat-kontakt .vik-profile img {
+    min-height: 202px;
+}
+
+.kontakt-repeater {
+    margin-top: 30px;
+}
+.kontakt-repeater h3 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #222222;
+}
+.kontakt-repeater h4 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: -0.8px;
+    text-align: left;
+    color: #222222;
+    padding-bottom: 40px;
+}
+.kontakt-repeater h5 {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.9px;
+    text-align: left;
+    color: #222222;
+}
+.kontakt-repeater p {
+    font-size: 18px;
+    line-height: 1.67;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.kontakt-repeater .vik-profile{
+    margin-bottom: 33px;
+    background: white;
+}
+
+.vikariat-dokument{
+    background: white;
+    padding: 32px 0px;
+    margin-bottom: 30px;
+}
+.vikariat-dokument .vikariat-dokument-entry {
+	margin: 0px 40px;
+}
+.vikariat-dokument .vikariat-dokument-download {
+	padding: 40px 15px 0px 80px;
+}
+.vikariat-dokument-download a {
+	font-size: 22px;
+	line-height: 1.45;
+	letter-spacing: 0.3px;
+	text-align: left;
+	color: #ed1846;
+	text-decoration: underline;
+}
+.vikariat-dokument h3 {
+	font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-dokument p {
+	font-size: 18px;
+	line-height: 1.67;
+	letter-spacing: 0px;
+	text-align: left;
+	color: #222222;
+}
+
+.pad{
+    padding:0px;
+}
+.vikariat-ausbildungsorte {
+    background: white;
+    margin:30px 0px;
+    padding-bottom: 30px;
+}
+.vikariat-ausbildungsorte h4 {
+    margin-top: 26px;
+    margin-left: 28px;
+    margin-right: 19px;
+    height: 29px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.36;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-ausbildungsorte p {
+    margin-left: 28px;
+    margin-right: 19px;
+    font-size: 13px;
+    line-height: 1.62;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #222222;
+}
+
+.vikariat-ausbildungsorte a {
+    margin-left: 28px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #5a3f99;
+}
+
+.vikariat-ausbildungsorte  a.vikariat-ausbildungsorte-button {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #5a3f99;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 25px;
+}
+.vikariat-ausbildungsorte  a.vikariat-ausbildungsorte-button:after {
+    content: '';
+    background-image: url(../img/arrow-right-colored.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    width: 11px;
+    height: 8px;
+    top: 3px;
+}
+
+.vikariat-ausbildungsorte-two {
+    background: white;
+    margin-bottom:30px;
+}
+.vikariat-ausbildungsorte-two h4 {
+    margin-top:46px;
+    margin-left: 56px;
+    margin-right: 19px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.36;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-ausbildungsorte-two p {
+    margin-left: 56px;
+    margin-right: 19px;
+    font-size: 13px;
+    line-height: 1.62;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-ausbildungsorte-two  a.vikariat-ausbildungsorte-button {
+    margin-left: 56px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: #5a3f99;
+    text-transform: uppercase;
+    position: relative;
+    padding-right: 25px;
+}
+.vikariat-ausbildungsorte-two  a.vikariat-ausbildungsorte-button:after {
+    content: '';
+    background-image: url(../img/arrow-right-colored.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    width: 11px;
+    height: 8px;
+    top: 3px;
+}
+
+.vikariat-inhalte {
+    background: white;
+    margin-bottom: 10px;
+}
+
+.vikariat-inhalte h4 {
+    margin-top: 26px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.45;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #222222;
+}
+.vikariat-inhalte p {
+    padding-right:30px; 
+    font-size: 13px;
+    line-height: 1.62;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #222222;
+}
+.inhalte-title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: left;
+    color: #222222;
+    margin: 30px 0px;
+}

@@ -1,0 +1,204 @@
+<h1>WordPress Project Starter Template</h1>
+
+<hr>
+
+<h2>Requirements</h2>
+<ul>
+	<li>PHP 7 or greater</li>
+	<li>MySQL 5.6 or greater OR MariaDB 10.0 or greater</li>
+	<li>The mod_rewrite Apache module</li>
+</ul>
+<p>
+	For more info on WordPress requirements:<br>
+	<a href="https://wordpress.org/about/requirements/" target="_blank">https://wordpress.org/about/requirements/</a>
+</p>
+
+<hr>
+
+<h2>Installation</h2>
+
+<ol>
+	<li>
+		Download the master branch:<br><br>
+		<code class="language-bash">
+			https://bitbucket.org/digitalexpertsunited/wp-starter.git
+		</code>
+		<br>
+	</li>
+	<li>
+		Clone it inside the root folder of your server (usually htdocs, public_html, www, etc), the folder's name where you will clone the repo its recommended to be the name of the project.<br>
+	</li>
+	<li>
+		Create a new database named after the projects name, for example if the projects name is called LiveJournal, the database can be called, livejournal.<br>
+	</li>
+	<li>
+		Create a new virtualhost on windows (VHOSTS), by editing the vhosts configuration file on XAMPP server and hosts file on Windows folder.<br>
+		Its recommanded to name the virtualhost after the name of the project (i.e project is named LiveJournal, vhost name is livejournal.dev)<br>
+		For more info regarding "how to setup virtualhosts on windows", you can check here:<br>
+		<a href="http://foundationphp.com/tutorials/apache_vhosts.php" target="_blank">http://foundationphp.com/tutorials/apache_vhosts.php</a><br>
+		<a href="https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpress/" target="_blank">https://www.cloudways.com/blog/configure-virtual-host-on-windows-10-for-wordpress/</a><br>
+	</li>
+	<li>
+		Restart Apache Server. On Windows you need to open XAMPP/Wamp and manually stop and start Apache service. This needs to be done in order for Apache to "read" the latest vhosts file. On Linux web server you need to login via SSH and run the command:<br>
+		<br>
+		<code class="language-bash">
+			sudo service apache2 restart
+		</code>
+		<br><br>
+		For more info on how to work with Apache service on Linux/UNIX based OS you can read the article below:<br>
+		<a href="https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/" target="_blank">https://www.cyberciti.biz/faq/star-stop-restart-apache2-webserver/</a><br>
+	</li>
+	<li>
+		Open the url you configured above (i.e livejournal.dev) on your browser of choice and you will be asked to install WordPress.<br>
+	</li>
+	<li>
+		Follow all the WordPress installation steps as requested, then login on your admin panel with your credentials and here you have it ... you just installed the WP starter project on your local development environment.
+	</li>
+	<li>Check that everything is up to date (WordPress core, plugins) before start developing, if not, update everything then check all works correctly ... only then you can start developing. This is to ensure that we develop using the latest possible features/technologies/methods and our code is safe to use with the current technologies (no reason to keep supporting old technologies if we don't support web trends).
+	</li>
+</ol>
+
+<hr>
+
+<h2>Whats inside the project?</h2>
+<ul>
+	<li>WordPress (latest version, if not update and check all works correctly)</li>
+	<li>
+		Installed Plugins (latest version, if not update and check all works correctly)
+		<ul>
+			<li>Advanced Custom Fields (<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank">https://wordpress.org/plugins/advanced-custom-fields/</a>)</li>
+			<li>Advanced Reset WP (<a href="https://wordpress.org/plugins/advanced-reset-wp/" target="_blank">https://wordpress.org/plugins/advanced-reset-wp/</a>)</li>
+			<li>Developer (<a href="https://wordpress.org/plugins/developer/" target="_blank">https://wordpress.org/plugins/developer/</a>)</li>
+			<li>Theme Check (<a href="https://wordpress.org/plugins/theme-check/" target="_blank">https://wordpress.org/plugins/theme-check/</a>)</li>
+			<li>What The File (<a href="https://wordpress.org/plugins/what-the-file/" target="_blank">https://wordpress.org/plugins/what-the-file/</a>)</li>
+			<li>WordPress Importer (<a href="https://wordpress.org/plugins/wordpress-importer/" target="_blank">https://wordpress.org/plugins/wordpress-importer/</a>)</li>
+		</ul>
+	</li>
+	<li>
+		Installed Themes
+		<ul>
+			<li>Digitaleheimat WordPress Boostrap Starter Theme</li>
+			<li>Digitaleheimat WordPress Foundation Starter Theme</li>
+		</ul>
+	</li>
+</ul>
+
+<hr>
+
+<h2>How to work with pre-defined Themes?</h2>
+<p>Inside <kbd>themes</kbd> folder on WordPress there are installed 2 pre-defined themes which where built from scratch in order to use them as starter themes. Both the themes have almost the same files/folders structure and it is recommended to keep it that way (if possible, based on specific project needs).</p>
+<p>The big difference between the 2 themes is the frontend CSS/JS framework used on the themes, one of them uses <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> <a href="https://github.com/twbs/bootstrap/releases" target="_blank">(latest version)</a> and the other theme uses <a href="https://foundation.zurb.com/">Foundation</a> <a href="https://github.com/zurb/foundation-sites/releases" target="_blank">(latest version)</a></p>
+<p>While developing using these pre-defined themes, it is recommended to:</p>
+<ul>
+	<li>continue developing using same files/folders structure (specially for the <kbd>includes</kbd> folder)</li>
+	<li>continue developing using same coding standards as defined in the themes (so same spaces, same bracket conventions, same naming variables/functions conventions, etc)</li>
+</ul>
+<p>The themes have a self-explenatory files/folders structure. In the root of the theme you will find the basic WordPress views. What is custom are folders like:</p>
+<ul>
+	<li><b>assets</b> - all css/js/fonts/img will be put here</li>
+	<li><b>includes</b> - theme logic will be put here (more on includes will be explained below</li>
+	<li><b>languages</b> - folder where pot/po/mo files will be put to make the theme translation ready</li>
+	<li><b>loop</b> - the WordPress loop templates (where the contet of pages/posts/cpts, etc are created)</li>
+	<li><b>page-templates</b> - all custom page templates will be put here</li>
+	<li><b>partials</b> - here we can add page elements that are repetitive, so they need to be in every page like a component/module</li>
+</ul>
+<p>Based on this files/folders structure it's easy to understand that the theme has a clear division between what is logic and what is a view and where each should be put. So the code also needs to be conform this concept, separating logic from view, where it is possible. Example if you need to trim the title of a post on a certain loop, it might be better to create a helper function, or WordPress filter in helpers.php and then call the function in the view or in the case of the filter, wont need to be called its automatically working. Problem with using the filter in this case is that the filter is universal so will be applied to all the titles in the website not just the ones you might want to trim.</p>
+<p>In order to make it easier for the developer to understand how <kdb>includes</kdb> folder works here is a more detailed explanation:</p>
+<ul>
+	<li><b>admin</b> - here will be added code related to the theme customizer and theme documentation</li>
+	<li><b>ajax</b> - for each ajax action that we will be doing in frontend, we need an ajax handler in WordPress, so for each ajax action, on this folder we create a file that will do the ajax request handling</li>
+	<li><b>extras</b> - theme functionalities like custom meta, custom footer, etc</li>
+	<li><b>helpers</b> - helper functions needed for the frontend or even for logic</li>
+	<li><b>libraries</b> - libraries used in the theme, for example bootstrap navwalker class</li>
+	<li><b>setup</b> - here the theme will declare all its supports, widgets, menus, custom media sizes, enqueue scripts/styles, etc</li>
+</ul>
+<hr>
+
+<h2>Theme Standards</h2>
+<p>The themes only are used as a starter theme. Which means they will be used from developers so they can create the new themes on top of these themes following the themes structure, code organisation and structure and coding best practices.</p>
+<p>In order to guarantee that themes are following all of the above they will be tested when the development phase in the theme is finished for:</p>
+<ul>
+	<li>theme files/folder structure is clear and organised</li>
+	<li>theme will be reviewed at code level</li>
+	<li>theme will be checked that the developer has taken into account edge cases that can happen in CMSs (<a href="https://codex.wordpress.org/Theme_Unit_Test" target="_blank">https://codex.wordpress.org/Theme_Unit_Test</a>)</li>
+	<li>theme should be translation ready (except cases when its explicitely specified from PM that it shouldnt be)</li>
+	<li>theme must pass all tests from Theme Check plugin (<a href="https://wordpress.org/plugins/theme-check/" target="_blank">https://wordpress.org/plugins/theme-check/</a>)</li>
+	<li>theme will be checked in mobile devices (so it needs to be responsive ready)</li>
+	<li>theme will be checked on BrowserStack (so it shouldnt have any cross-browser compatibility issues)</li>
+</ul>
+<p>Failing in any 1 of the above "checklist" items means that the theme will be put again on development status until all issues found are solved and ofcurse it will be checked again that those issues found are solved (and also an exploratory testing needs to be made in order to check that the latest fixes didnt break anything else).</p>
+<hr>
+
+<h2>Coding Best Practices</h2>
+<p>While this is a very broad topic and very relative also (different people have different opinions on which to consider as best practice), i'm considering as best practice what has been proven to work in the past.</p>
+<h3>Universal Best Practices</h3>
+<ul>
+	<li>Keep the code structure clean</li>
+	<li>Do not misc view and logic, try as much as possible to divide view from logic (using helpers and other WordPress functions)</li>
+	<li>Do not reinvent the wheel. For example no need to create a custom pagination function, WordPress already provides one and ways to modify it for your specific needs.</li>
+	<li>Be consistent while coding. It is recommended to keep the same naming conventions, same space type (tab with 4 spaces or tab with 2 spaces, do not use spaces to indent, etc) ... important is to be consistent. So no matter what convention you chose to use, be consistent, it helps making the code more readable.</li>
+	<li>Try to write readable, clean and maintanable code (which also if well done helps making the code future-proof ready)</li>
+</ul>
+<h3>WordPress Coding Standards</h3>
+<ul>
+	<li><a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/php/" target="_blank">PHP Coding Standards</a></li>
+	<li><a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/html/" target="_blank">HTML Coding Standards</a></li>
+	<li><a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/css/" target="_blank">CSS Coding Standards</a></li>
+	<li><a href="https://make.wordpress.org/core/handbook/best-practices/coding-standards/javascript/" target="_blank">JavaScript Coding Standards</a></li>
+	<li><a href="https://developer.wordpress.org/themes/getting-started/" target="_blank">WordPress Developer Handbook - Themes</a></li>
+	<li><a href="https://developer.wordpress.org/plugins/" target="_blank">WordPress Developer Handbook - Plugins</a></li>
+</ul>
+<p>While no-one is asking you to learn all the standards, it is good for every WordPress to know how to use WordPress at its best, using standards and practices recommended from them. If there are practices recommended in the WordPress Coding Standards that are against other standards recommended on this Guideline, the standarts presented here have priority.</p>
+<h3>Other references:</h3>
+<ul>
+	<li><a href="http://codeguide.co/" target="_blank">http://codeguide.co/</a></li>
+	<li><a href="http://www.phptherightway.com/" target="_blank">http://www.phptherightway.com/</a></li>
+	<li><a href="https://css-tricks.com/bem-101/" target="_blank">https://css-tricks.com/bem-101/</a></li>
+	<li><a href="https://cssguidelin.es/" target="_blank">https://cssguidelin.es/</a></li>
+	<li><a href="http://bradfrost.com/blog/post/css-architecture-for-design-systems//" target="_blank">http://bradfrost.com/blog/post/css-architecture-for-design-systems/</a></li>
+</ul>
+<hr>
+
+<h2>Working with Git</h2>
+<ul>
+	<li>Push at least daily on Git</li>
+	<li>Before pushing changes online, check that all is working (if you work in group you might create problems for other team members)</li>
+	<li>When you work on new features, add a new branch on the git repo and push all changes related to that feature to that branch</li>
+	<li>When the feature is finished and confirmed from QA/PM/Client, merge feature branch to master</li>
+</ul>
+<hr>
+
+<h2>Recommended Plugins</h2>
+<ul>
+	<li><b>Advanced Custom Fields Pro</b> - Needed only if the project needs can't be achieved using free version of <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank">ACF</a> which is already pre-bundled in this project. In cases like that ask PM/Team Leader for supervision.</li>
+	<li><a href="https://wordpress.org/plugins/wordpress-seo/" target="_blank">Yoast SEO</a> - Improve On-Page SEO of website.</li>
+	<li><a href="https://wordpress.org/plugins/better-wp-security/" target="_blank">iThemes Security (formerly Better WP Security)</a> - Improve security of WordPress website by implementing multiple layers of security.</li>
+	<li><a href="https://wordpress.org/plugins/w3-total-cache/" target="_blank">W3 Total Cache</a> - Improve website's performance</li>
+	<li><a href="https://wordpress.org/plugins/wp-smushit/" target="_blank">Smush Image Compression and Optimization</a> - Optimise images uploaded in WordPress. For more advanced features, depending on project needs, you might need to ask from PM/Team Leader for access on <b>Smush Image Compression and Optimization Pro</b></li>
+	<li><a href="http://www.gravityforms.com/" target="_blank">Gravity Forms Pro</a> - Gravity Forms is the Easiest Tool to Create Advanced Forms for Your WordPress Powered Website (ask your Team Leader/PM/supervisor if you need the license to use this plugin)</b></li>
+</ul>
+<p><b>For all premium plugins it is advised to consult before with Team Leader/PM/supervisor since there might be licensing issues, etc.</b></p>
+<hr>
+
+<h2>Browser Support</h2>
+<p>Browser support is related to the way how each of the libraries/frameworks used, support each of the main browsers. If a certain library does not support a certain browser then that browser support is partial or not supported and viceversa, if a library/framework, supports all browsers then the browser support for that library is fully supported.</p>
+<p>Based on this definition, here are the browser support for the libraries pre-included with WP Start project template:</p>
+<ul>
+	<li><a href="https://v4-alpha.getbootstrap.com/getting-started/browsers-devices/" target="_blank">Bootstrap</a></li>
+	<li><a href="http://foundation.zurb.com/sites/docs/compatibility.html" target="_blank">Foundation</a></li>
+	<li><a href="https://jquery.com/browser-support/" target="_blank">jQuery</a></li>
+</ul>
+<p>When you chose which technologies to use on your project (in our case, which theme to use), keep always in mind project requirements in order so the technology chosen will not be a blocker to achieve the projects requirements.</p>
+<p>Other references:</p>
+<ul>
+	<li><a href="https://modernizr.com/" target="_blank">Modernizr</a></li>
+	<li><a href="https://caniuse.com/" target="_blank">Can i use</a></li>
+</ul>
+<hr>
+
+<h2>Issues</h2>
+<p>If you find anything weird with WP Starter Project, please let us know using the issues tracker.</p>
+<hr>
+
+<h2>Copyright and License</h2>
+<p><a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html" target="_blank">GPL-V2</a></p>
